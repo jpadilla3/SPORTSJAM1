@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   startTime() async {
-    var duration = const Duration(seconds: 6);
+    var duration = const Duration(milliseconds: 7500);
     return Timer(duration, navigateToDeviceScreen);
   }
 
@@ -109,7 +109,8 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                 ]
                     .animate(interval: 5.seconds)
-                    .fadeIn(delay: const Duration(seconds: 3))),
+                    .fadeIn(delay: const Duration(seconds: 3))
+                    .fadeOut(delay: const Duration(seconds: 6))),
           ],
         ),
       ),
