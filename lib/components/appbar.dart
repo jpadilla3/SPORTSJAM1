@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Widget appbar() {
   return AppBar(
-    leading: null,
+    automaticallyImplyLeading: false,
     backgroundColor: Colors.red,
     title: const Text(
       'SPORTSJAM',

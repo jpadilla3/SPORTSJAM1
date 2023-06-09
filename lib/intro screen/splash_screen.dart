@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:sportsjam/components/navbar.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -24,8 +25,12 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   navigateToDeviceScreen() {
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => const NavBar()));
+    Navigator.push(
+        context,
+        PageTransition(
+            type: PageTransitionType.fade,
+            duration: const Duration(milliseconds: 500),
+            child: const NavBar()));
   }
 
   titleStyle() {
