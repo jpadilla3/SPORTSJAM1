@@ -25,6 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   navigateToDeviceScreen() {
+    Navigator.of(context).pop();
     Navigator.push(
         context,
         PageTransition(
